@@ -5,7 +5,7 @@
 ;; bits of information: the running sum and the current population.
 ;;
 ;; Taking the purely serial route the function would probably look
-;; like the following (for brevity, a vetcor will be used to hold the
+;; like the following (for brevity, a vector will be used to hold the
 ;; data):
 
 ;; The initial value for will be zero (current sum) and zero (current
