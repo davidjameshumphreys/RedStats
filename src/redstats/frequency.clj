@@ -5,11 +5,11 @@
                running-count]
               next-value]
   [(inc population)
-   (assoc! running-count next-value (inc (get running-count next-value 0)))]
+   (assoc running-count next-value (inc (get running-count next-value 0)))]
   )
 
 (defn fr-com
-  ([] [0 (transient {})])
+  ([] [0 {}])
   ([[p1 m1] [p2 m2]]
      [(+ p1 p2) (merge-with + m1 m2)]
      )
@@ -24,5 +24,5 @@
          fr-com
          fr-agg
          coll)]
-    [population (persistent! frequencies)]
+    [population frequencies]
     ))

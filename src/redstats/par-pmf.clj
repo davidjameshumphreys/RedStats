@@ -15,10 +15,6 @@
 
 (defn pmf [n coll]
   (let [[population frequencies] (f/freq n coll)]
-    
-    ;;TODO: In the freq function the map is made persistent.  Could
-    ;;there be a better way?
-    ;; It goes through two phases of transience.
     (persistent!
      (r/fold
       n
